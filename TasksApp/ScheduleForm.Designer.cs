@@ -1,7 +1,7 @@
 ﻿
 namespace TasksApp
 {
-    partial class Form1
+    partial class ScheduleForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,10 +32,10 @@ namespace TasksApp
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.sch_url = new System.Windows.Forms.TextBox();
-            this.sch_time = new System.Windows.Forms.TextBox();
-            this.sch_check_btm = new System.Windows.Forms.Button();
-            this.sch_config_btm = new System.Windows.Forms.Button();
+            this.SchUrl = new System.Windows.Forms.TextBox();
+            this.SchTime = new System.Windows.Forms.TextBox();
+            this.SchCheckBtm = new System.Windows.Forms.Button();
+            this.SchConfigBtm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -68,55 +68,57 @@ namespace TasksApp
             this.label3.TabIndex = 2;
             this.label3.Text = "実行時間：";
             // 
-            // sch_url
+            // SchUrl
             // 
-            this.sch_url.Location = new System.Drawing.Point(207, 84);
-            this.sch_url.Name = "sch_url";
-            this.sch_url.PlaceholderText = "URLを入力してください";
-            this.sch_url.Size = new System.Drawing.Size(349, 27);
-            this.sch_url.TabIndex = 3;
+            this.SchUrl.Location = new System.Drawing.Point(207, 84);
+            this.SchUrl.Name = "SchUrl";
+            this.SchUrl.PlaceholderText = "URLを入力してください";
+            this.SchUrl.Size = new System.Drawing.Size(349, 27);
+            this.SchUrl.TabIndex = 3;
             // 
-            // sch_time
+            // SchTime
             // 
-            this.sch_time.Location = new System.Drawing.Point(207, 130);
-            this.sch_time.MaxLength = 5;
-            this.sch_time.Name = "sch_time";
-            this.sch_time.PlaceholderText = "HH:MM";
-            this.sch_time.Size = new System.Drawing.Size(65, 27);
-            this.sch_time.TabIndex = 4;
+            this.SchTime.Location = new System.Drawing.Point(207, 130);
+            this.SchTime.MaxLength = 5;
+            this.SchTime.Name = "SchTime";
+            this.SchTime.PlaceholderText = "HH:MM";
+            this.SchTime.Size = new System.Drawing.Size(65, 27);
+            this.SchTime.TabIndex = 4;
             // 
-            // sch_check_btm
+            // SchCheckBtm
             // 
-            this.sch_check_btm.Location = new System.Drawing.Point(266, 213);
-            this.sch_check_btm.Name = "sch_check_btm";
-            this.sch_check_btm.Size = new System.Drawing.Size(142, 41);
-            this.sch_check_btm.TabIndex = 5;
-            this.sch_check_btm.Text = "スケジュール確認";
-            this.sch_check_btm.UseVisualStyleBackColor = true;
+            this.SchCheckBtm.Location = new System.Drawing.Point(266, 213);
+            this.SchCheckBtm.Name = "SchCheckBtm";
+            this.SchCheckBtm.Size = new System.Drawing.Size(142, 41);
+            this.SchCheckBtm.TabIndex = 5;
+            this.SchCheckBtm.Text = "スケジュール確認";
+            this.SchCheckBtm.UseVisualStyleBackColor = true;
+            this.SchCheckBtm.Click += new System.EventHandler(this.SchCheckBtm_Click);
             // 
-            // sch_config_btm
+            // SchConfigBtm
             // 
-            this.sch_config_btm.Location = new System.Drawing.Point(414, 213);
-            this.sch_config_btm.Name = "sch_config_btm";
-            this.sch_config_btm.Size = new System.Drawing.Size(142, 41);
-            this.sch_config_btm.TabIndex = 6;
-            this.sch_config_btm.Text = "設定";
-            this.sch_config_btm.UseVisualStyleBackColor = true;
+            this.SchConfigBtm.Location = new System.Drawing.Point(414, 213);
+            this.SchConfigBtm.Name = "SchConfigBtm";
+            this.SchConfigBtm.Size = new System.Drawing.Size(142, 41);
+            this.SchConfigBtm.TabIndex = 6;
+            this.SchConfigBtm.Text = "設定";
+            this.SchConfigBtm.UseVisualStyleBackColor = true;
+            this.SchConfigBtm.Click += new System.EventHandler(this.SchConfigBtm_Click);
             // 
-            // Form1
+            // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 281);
-            this.Controls.Add(this.sch_config_btm);
-            this.Controls.Add(this.sch_check_btm);
-            this.Controls.Add(this.sch_time);
-            this.Controls.Add(this.sch_url);
+            this.Controls.Add(this.SchConfigBtm);
+            this.Controls.Add(this.SchCheckBtm);
+            this.Controls.Add(this.SchTime);
+            this.Controls.Add(this.SchUrl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ScheduleForm";
+            this.Text = "スケジュール設定アプリ(※今日のみ設定可能)";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,10 +129,10 @@ namespace TasksApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox sch_url;
-        private System.Windows.Forms.TextBox sch_time;
-        private System.Windows.Forms.Button sch_check_btm;
-        private System.Windows.Forms.Button sch_config_btm;
+        private System.Windows.Forms.TextBox SchUrl;
+        private System.Windows.Forms.TextBox SchTime;
+        private System.Windows.Forms.Button SchCheckBtm;
+        private System.Windows.Forms.Button SchConfigBtm;
     }
 }
 
