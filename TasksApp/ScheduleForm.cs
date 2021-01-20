@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,11 @@ namespace TasksApp
 
         private void SchCheckBtm_Click(object sender, EventArgs e)
         {
-            //メッセージボックスを表示する
-            MessageBox.Show("まだ実装できていないよ",
-                "開発中です",
-                MessageBoxButtons.OK);
+            String executeCommand = "control schedtasks";
+            ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd.exe", "/c " + executeCommand);
+            processStartInfo.CreateNoWindow = true; // コマンドプロンプトを表示
+            processStartInfo.UseShellExecute = false; // シェル機能オフ
+            Process.Start(processStartInfo);
         }
 
         private void SchConfigBtm_Click(object sender, EventArgs e)
